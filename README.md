@@ -3,7 +3,7 @@ Some helper modules that allow complex networks (particulary those with parallel
 
 # Example
 
-## Pass same input to 2 different NN branches and merge the results by adding
+**Pass same input to 2 different NN branches and merge the results by adding**
 ```{python3}
 nn.Sequential(
   Parallel(branch1, branch2),
@@ -11,7 +11,7 @@ nn.Sequential(
 )
 ```
 
-## Split the RGB channels of a batch of images and pass each to a different NN branch and concat the results
+**Split the RGB channels of a batch of images and pass each to a different NN branch and concat the results**
 ```{python3}
 nn.Sequential(
   Split((2, 1), dim=1),
