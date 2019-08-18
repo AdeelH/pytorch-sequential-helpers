@@ -11,7 +11,7 @@ nn.Sequential(
 )
 ```
 
-**Split the RGB channels of a batch of images and pass each to a different NN branch and concat the results**
+**Split the RGB channels of a batch of images, pass each to a different NN branch, and concat the results**
 ```{python3}
 nn.Sequential(
   Split((1, 1, 1), dim=1),
