@@ -14,8 +14,8 @@ nn.Sequential(
 **Split the RGB channels of a batch of images and pass each to a different NN branch and concat the results**
 ```{python3}
 nn.Sequential(
-  Split((2, 1), dim=1),
-  Parallel(branch1, branch2),
+  Split((1, 1, 1), dim=1),
+  Parallel(branch1, branch2, branch3),
   Concat(dim=1)
 )
 ```
